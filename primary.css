@@ -6,6 +6,7 @@ body {
     color: #333;
 }
 
+/* NAVBAR */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,8 +22,11 @@ header {
     color: #2D520D;
 }
 
-.btn {
+nav .btn {
     margin-left: 10px;
+}
+
+.btn {
     font-size: 12px;
     padding: 10px 20px;
     border: 2px solid transparent;
@@ -53,4 +57,57 @@ header {
     background-color: #F2F2F2;
     border-color: #2D520D;
     color: #2D520D;
+}
+
+/* HERO SECTION */
+.hero.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 80px;
+    background-color: #f9f9f9;
+}
+
+.hero.content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero.headline {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero em {
+    color: #2D520D;
+}
+
+.hero.btn {
+    margin: 20px 0px;
+    padding: 10px 0px;
+}
+
+.hero.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero.content {
+        margin-bottom: 20px;
+    }
 }
