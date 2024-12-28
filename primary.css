@@ -60,7 +60,7 @@ nav .btn {
 }
 
 /* HERO SECTION */
-.hero.section {
+#hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,45 +69,111 @@ nav .btn {
     background-color: #f9f9f9;
 }
 
-.hero.content {
+#hero-content {
     flex: 1;
     max-width: 600px;
 }
 
-.hero.headline {
+#hero-headline {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.hero em {
+#hero-highlight {
     color: #2D520D;
 }
 
-.hero.btn {
+#hero-btn {
     margin: 20px 0px;
     padding: 10px 0px;
 }
 
-.hero.image {
+#hero-image {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.hero.image img {
+#hero-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FEATURE SECTION */
+#feature-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 80px;
+    padding: 0px 80px;
+}
+
+.feature {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33% - 30px);
+    min-width: 250px;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-badge {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2D520D;
+    background-color: #e8feeb;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.feature-link {
+    color: #375f13;
+    text-decoration: none;
+}
+
+.feature-link:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    .hero {
+    #hero-section {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero.content {
+    #hero-content {
         margin-bottom: 20px;
+    }
+
+    #feature-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        flex: 1 1 100%;
+        max-width: 90%;
     }
 }
