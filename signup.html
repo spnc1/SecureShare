@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+
+        <title>SecureShare</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="signup.css">
+        <script src="./signup.js"></script>
+        <link rel="icon" href="./assets/SecureShare.svg">
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html" id="logo">SecureShare <span id="page">Sign Up</span></a>
+        </header>
+
+        <main>
+            <section class="login">
+                <form id="loginForm">
+                    
+                    <label for="fname">First Name</label><br>
+                    <input class="formInput" type="text" id="fname" name="fname" placeholder="John"><br>
+
+                    <label for="lname">Last Name</label><br>
+                    <input class="formInput" type="text" id="lname" name="lname" placeholder="Doe"><br>
+
+                    <label for="username">Username</label><br>
+                    <input class="formInput" type="text" id="username" name="username" pattern="^(?=.{3,20}$)^(?![._])^[._A-Za-z0-9]+$" oninvalid="setCustomValidity('• May contain alphanumeric characters, . and _\n• Cannot begin with . or _\n• 3-20 characters long')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                    <!-- Pattern | Minimum 8 characters, Alphanumeric and '.' or '_', '.' or '_' must not be first character -->
+
+                    <label for="email">Email</label><br>
+                    <input class="formInput" type="email" id="email" name="email" placeholder="johndoe@website.com"><br>
+                    
+                    <label for="password">Password</label><br>
+                    <input class="formInput" type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" oninvalid="setCustomValidity('• 8+ characters long\n• 1+ uppercase letter\n• 1+ lowercase letter\n• 1+ number\n• 1+ special character')" onchange="try{setCustomValidity('')}catch(e){}">
+                    <!-- Pattern | Minimum: 8 characters; 1 uppercase; 1 lowercase; 1 number; 1 special character -->
+                    
+                    <div class="visibilityWrapper">
+                        <input class="formInput" type="checkbox" id="passwordVisibility" onclick="togglePasswordVisibility()"/>
+                        <label for="passwordVisibility" id="passwordVisibilityLabel"></label>
+                    </div><br>
+
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

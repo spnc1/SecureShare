@@ -1,0 +1,83 @@
+#page {
+    font-size: 24px;
+    font-style: italic;
+}
+
+/* LOGIN FIELD */
+.login {
+    display: flex;
+    padding: 60px;
+    align-content: center;
+    justify-content: center;
+}
+
+.login form {
+    background-color: #F0F0F0;
+    width: 85vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.formInput {
+    width: 83vw;
+    margin-bottom: 15px;
+    border: 2px solid #457a17;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 2px;
+}
+
+#password {
+    width: 81vw;
+}
+
+#submit {
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #2D520D;
+    color: #fff;
+}
+
+#submit:hover {
+    background-color: #2e4530;
+    border-color: #2e4530;
+}
+
+/* PASSWORD VISIBILITY */
+.visibilityWrapper {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+#passwordVisibility {
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#passwordVisibility + #passwordVisibilityLabel {
+    background-image: url('./assets/HidePassword.svg');
+    height: 18px;
+    width: 23px;
+    padding: 0px;
+    position: absolute;
+    z-index: 1;
+}
+
+#passwordVisibility:checked + #passwordVisibilityLabel {
+    background-image: url('./assets/ShowPassword.svg');
+    height: 15px;
+    width: 22px;
+    padding: 0px;
+}
